@@ -4,7 +4,7 @@ interface Power {
     desc: string;
 }
 
-export const powers:Power[] = [
+const powers:Power[] = [
     {
         id: 1,
         desc: 'Power 1'
@@ -22,3 +22,5 @@ export const powers:Power[] = [
         desc: 'Power 4'
     },
 ]
+
+export default powers;
