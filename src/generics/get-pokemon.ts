@@ -1,5 +1,5 @@
 import axios from "axios";
-import { PokemonResponse } from "../interfaces/pokemon";
+import { PokemonResponse } from "../interfaces";
 
 
 export const getPoke = async ( pokemonId: number ) => {
