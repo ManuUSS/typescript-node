@@ -1,9 +1,10 @@
 import axios from "axios";
+import { PokemonResponse } from "../interfaces/pokemon";
 
 
 export const getPoke = async ( pokemonId: number ) => {
 
-    const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${ pokemonId }`);
-    console.log( response );     
+    const { data } = await axios.get<PokemonResponse>(`https://pokeapi.co/api/v2/pokemon/${ pokemonId }`);
+    console.log( data.name );     
 
 }
