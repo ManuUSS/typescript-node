@@ -1,5 +1,5 @@
 import { printObj, genericFnAny, genericFn } from "./generics/generics";
-import { Hero } from "./interfaces/hero";
+import { Villian, Hero } from "./interfaces";
 
 // Definida como any
 // printObj( 123 );
@@ -22,4 +22,4 @@ const deadPool = {
     dangerLevel: 130
 }
 
-console.log( genericFn<Hero>( deadPool ).dangerLevel );
+console.log( genericFn<Villian>( deadPool ).dangerLevel );
