@@ -6,6 +6,11 @@ export const printObj = ( argument: any ) => {
     console.log( argument );
 }
 
-export function genericFn( arg: any ){
+export function genericFnAny( arg: any ){
+    return arg;
+}
+
+// Declaración correcta de una generic
+export function genericFn<T>( arg: T ):T {
     return arg;
 }
