@@ -1,4 +1,4 @@
 
-export const printObj = () => {
-    
+export const printObj = ( argument: any ) => {
+    console.log( argument );
 }
