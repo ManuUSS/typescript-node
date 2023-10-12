@@ -3,7 +3,13 @@ const printClg = ( constructor: Function ) => {
     console.log( constructor );
 }
 
-@printClg
+const printClgConditional = ( print: boolean = false ):Function => {
+    if( print ) {
+        return printClg
+    }
+    return () => {}
+}
+@printClgConditional( true )
 export class Pokemon {
 
     public publicApi: string = "https://pokeapi.co"
