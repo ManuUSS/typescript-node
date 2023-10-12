@@ -15,6 +15,12 @@ const blockPrototype = function( constructor: Function ) {
     Object.seal( constructor.prototype );
 }
 
+function CheckValidPokemon() {
+    return function ( target: any, propertyKey: string, descriptor: PropertyDescriptor ) {
+        console.log({ target, propertyKey, descriptor });
+    }
+}
+
 @blockPrototype
 @printClgConditional( true )
 export class Pokemon {
@@ -23,6 +29,7 @@ export class Pokemon {
 
     constructor ( public name: string ) {}
 
+    @CheckValidPokemon()
     savePokemon( id: number ) {
         console.log(`Pokemon guardado ${ id }`);
     }
