@@ -17,7 +17,14 @@ const blockPrototype = function( constructor: Function ) {
 
 function CheckValidPokemon() {
     return function ( target: any, propertyKey: string, descriptor: PropertyDescriptor ) {
-        console.log({ target, propertyKey, descriptor });
+        const originalFn = descriptor.value;
+        descriptor.value = ( id: number ) => {
+            if( id < 1 || id > 800 ) {
+                return console.error('El id del pokemon no existe')
+            } else {
+                return originalFn( id );
+            }
+        }
     }
 }
 
