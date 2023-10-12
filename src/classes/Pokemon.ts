@@ -9,6 +9,13 @@ const printClgConditional = ( print: boolean = false ):Function => {
     }
     return () => {}
 }
+
+const blockPrototype = function( constructor: Function ) {
+    Object.seal( constructor );
+    Object.seal( constructor.prototype );
+}
+
+@blockPrototype
 @printClgConditional( true )
 export class Pokemon {
 
