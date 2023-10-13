@@ -34,7 +34,13 @@ function ReadOnly( isWritable: boolean = true ):Function {
             get() {
                 return 'Manuel'
             },
-            set() {}
+            set( this, val ) {
+                Object.defineProperty( this, propertyKey, {
+                    value: val,
+                    writable: !isWritable,
+                    enumerable: false
+                })
+            }
         }
 
         return descriptor;
