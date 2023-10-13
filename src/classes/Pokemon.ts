@@ -28,8 +28,8 @@ function CheckValidPokemon() {
     }
 }
 
-function readOnly( isWritable: boolean = true ) {
-    
+function ReadOnly( isWritable: boolean = true ) {
+
 }
 
 @blockPrototype
