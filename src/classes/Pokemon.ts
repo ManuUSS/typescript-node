@@ -30,7 +30,14 @@ function CheckValidPokemon() {
 
 function ReadOnly( isWritable: boolean = true ):Function {
     return function ( target: any, propertyKey: string ) {
+        const descriptor:PropertyDescriptor = {
+            get() {
+                return 'Manuel'
+            },
+            set() {}
+        }
 
+        return descriptor;
     }
 }
 
