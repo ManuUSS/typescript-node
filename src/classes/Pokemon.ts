@@ -28,14 +28,17 @@ function CheckValidPokemon() {
     }
 }
 
-function ReadOnly( isWritable: boolean = true ) {
+function ReadOnly( isWritable: boolean = true ):Function {
+    return function ( target: any, propertyKey: string ) {
 
+    }
 }
 
 @blockPrototype
 @printClgConditional( true )
 export class Pokemon {
 
+    @ReadOnly( false )
     public publicApi: string = "https://pokeapi.co"
 
     constructor ( public name: string ) {}
