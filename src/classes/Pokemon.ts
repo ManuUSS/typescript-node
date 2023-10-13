@@ -28,6 +28,10 @@ function CheckValidPokemon() {
     }
 }
 
+function readOnly( isWritable: boolean = true ) {
+    
+}
+
 @blockPrototype
 @printClgConditional( true )
 export class Pokemon {
