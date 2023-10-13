@@ -51,7 +51,7 @@ function ReadOnly( isWritable: boolean = true ):Function {
 @printClgConditional( true )
 export class Pokemon {
 
-    @ReadOnly( false )
+    @ReadOnly()
     public publicApi: string = "https://pokeapi.co"
 
     constructor ( public name: string ) {}
